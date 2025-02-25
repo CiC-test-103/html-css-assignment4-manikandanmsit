@@ -1,43 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Results summary component | Assignment 4</title>
-  <link rel="stylesheet" href="style.css">
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <title>Frontend Mentor | Results summary component | Assignment 4</title>
 
-</head>
-<body>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="stats_Card">
+      <div class="stats_left">
+        <div class="stats_YourResult">Your Result</div>
+        <div class="round-cell">
+          <span>76</span>
+          <div class="stats_Gray">of 100</div>
+        </div>
+        <div class="stats_Great">Great</div>
+        <div class="stats_LstContent">
+          You scored higher than 65% of <br />the people who have taken <br />
+          these tests.
+        </div>
+      </div>
+      <div class="stats_right">
+        <div class="stats_Summary">Summary</div>
+        <div class="stats_Reaction">
+          <div class="stats_Reaction_Red">
+            <img src="./assets/images/icon-reaction.svg" alt="icon-reaction" />
+            <p>Reaction</p>
+          </div>
+          <p>80<span class="stats_Gray">/ 100</span></p>
+        </div>
+        <div class="stats_Memory">
+          <div class="stats_Memory_Orange">
+            <img src="./assets/images/icon-memory.svg" alt="icon-memory" />
+            <p>Memory</p>
+          </div>
+          <p>92<span class="stats_Gray"> / 100 </span></p>
+        </div>
+        <div class="stats_Verbal">
+          <div class="stats_Verbal_Green">
+            <img src="./assets/images/icon-verbal.svg" alt="icon-verbal" />
 
-  Your Result
-  76
-  of 100
+            <p>Verbal</p>
+          </div>
+          <p>61<span class="stats_Gray"> / 100 </span></p>
+        </div>
+        <div class="stats_Visual">
+          <div class="stats_Visual_Blue">
+            <img src="./assets/images/icon-visual.svg" alt="icon-visual" />
+            <p>Visual</p>
+          </div>
+          <p>73<span class="stats_Gray"> / 100 </span></p>
+        </div>
+        <div class="stats_Coninue">Continue</div>
+      </div>
+    </div>
 
-  Great
-  You scored higher than 65% of the people who have taken these tests.
-  
-  Summary
-
-  Reaction
-  80 / 100
-
-  Memory
-  92 / 100
-
-  Verbal
-  61 / 100
-
-  Visual
-  72 / 100
-
-  Continue
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Manikandan Nagarajan</a>.
+    </div>
+  </body>
 </html>

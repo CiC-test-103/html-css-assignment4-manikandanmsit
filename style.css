@@ -1,12 +1,14 @@
 /** Variable Imports **/
-@import './variables.css';
+@import "./variables.css";
 
 /**
   CSS Reset
   Source: https://www.joshwcomeau.com/css/custom-css-reset/
 **/
 /* 1. Use a more-intuitive box-sizing model */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 /* 2. Remove default margin */
@@ -19,35 +21,288 @@ body {
   /* 4. Improve text rendering */
   -webkit-font-smoothing: antialiased;
 }
+
 /* 5. Improve media defaults */
-img, picture, video, canvas, svg {
+img,
+picture,
+video,
+canvas,
+svg {
   display: block;
   max-width: 100%;
 }
 /* 6. Inherit fonts for form controls */
-input, button, textarea, select {
+input,
+button,
+textarea,
+select {
   font: inherit;
 }
 /* 7. Avoid text overflows */
-p, h1, h2, h3, h4, h5, h6 {
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   overflow-wrap: break-word;
 }
 /* 8. Improve line wrapping */
 p {
   text-wrap: pretty;
 }
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   text-wrap: balance;
 }
 /*
   9. Create a root stacking context
 */
-#root, #__next {
+#root,
+#__next {
   isolation: isolate;
 }
 
 /** Your CSS Below **/
 
+body {
+  display: flex;
+  flex-direction: column;
+  font-size: 18px;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 10%;
+  background-color: var(--clr-paleBlue);
+  font-weight: var(--fw-regular);
+}
+
+.stats_Card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  max-width: 700px;
+  width: 100%; /* Ensure it takes up available space */
+  background-color: var(--clr-white);
+  border-radius: 4rem;
+  border-top-right-radius: 2rem;
+  border-bottom-right-radius: 2rem;
+}
+.stats_left {
+  background: linear-gradient(
+    var(--gra-lightSlateBlue),
+    var(--gra-lightRoyalBlue)
+  );
+  text-align: center;
+  border-radius: 2rem;
+  padding: 20px;
+  margin: 2px;
+}
+.stats_right {
+  display: flex;
+  flex-direction: column;
+  padding: 25px;
+  margin: 10px;
+}
+
+.stats_Summary {
+  align-items: left;
+  font-family: var(--ff-base);
+  color: var(--clr-greenTeal);
+  font-size: 25px;
+}
+
+.stats_Reaction {
+  display: flex;
+  flex-direction: row;
+  background-color: hsl(0, 100%, 67%, 0.05);
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  justify-content: space-between;
+  height: 50px;
+}
+.stats_Reaction_Red {
+  color: var(--clr-lightRed);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-right: 5px;
+  font-weight: 300px;
+}
+
+.stats_score {
+  font-weight: var(--fw-black);
+  color: var(--clr-darkGrayBlue);
+  justify-content: right;
+}
+.stats_Gray {
+  font-family: var(--ff-base);
+  font-size: 20px;
+  color: hsl(231, 6%, 54%);
+  align-items: left;
+  padding: 5px;
+}
+
+.stats_Memory {
+  display: flex;
+  flex-direction: row;
+  background-color: hsla(49, 87%, 64%, 0.05);
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  justify-content: space-between;
+  height: 50px;
+}
+.stats_Memory_Orange {
+  color: var(--clr-orangeYellow);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-right: 5px;
+  font-weight: 300px;
+}
+.stats_Verbal {
+  display: flex;
+  flex-direction: row;
+  background-color: hsl(166, 100%, 37%, 0.05);
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  justify-content: space-between;
+  height: 50px;
+}
+
+.stats_Verbal_Green {
+  color: var(--clr-greenTeal);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-right: 5px;
+  font-weight: 300px;
+}
+.stats_Visual {
+  display: flex;
+  flex-direction: row;
+  background-color: hsl(234, 85%, 45%, 0.05);
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  justify-content: space-between;
+  height: 50px;
+}
+
+.stats_Visual_Blue {
+  color: var(--clr-cobaltBlue);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-right: 5px;
+  font-weight: 300px;
+}
+
+.stats_Coninue {
+  display: flex;
+  align-items: center;
+  font-family: var(--ff-base);
+  color: var(--clr-white);
+  background: hsl(245, 24%, 39%);
+  padding: 10px;
+  border-radius: 20px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  height: 50px;
+  justify-content: center;
+}
+.stats_YourResult {
+  align-items: center;
+  font-size: 20px;
+  font-family: var(--ff-base);
+  color: var(--clr-white);
+  padding: 20px;
+  border-radius: 20px;
+}
+
+.round-cell {
+  width: 175px; /* Define the width of the circle */
+  height: 175px; /* Define the height to match the width, making it a perfect circle */
+  background: linear-gradient(
+    var(--gra-violetBlue),
+    var(--gra-persianBlue)
+  ); /* Set a background color (optional) */
+  color: white; /* Set the text color */
+  font-size: 26px; /* Set font size */
+  display: flex; /* Use flexbox to center the text */
+  flex-direction: column;
+  justify-content: center; /* Center the text horizontally */
+  align-items: center; /* Center the text vertically */
+  border-radius: 50%; /* Make it round */
+  text-align: center; /* Center text inside */
+  margin: 0 auto;
+}
+
+.round-cell span {
+  font-size: 60px;
+}
+
+.stats_Great {
+  font-family: var(--ff-base);
+  font-size: 35px;
+  color: hsl(231, 19%, 93%);
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+.stats_LstContent {
+  font-family: var(--ff-base);
+  font-size: 15px;
+  color: hsl(228, 12%, 75%);
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+img {
+  margin: 5px; /* Adds space on all sides */
+}
+
+@media (max-width: 520px) {
+  .stats_left {
+    width: 100%;
+    padding: 0px;
+    border-radius: 0px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+  }
+
+  .stats_right {
+    padding: 0px;
+    width: 80%;
+    margin: auto;
+  }
+
+  .stats_Card {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 100%;
+    border-radius: 0px;
+  }
+}
+
 /** Attribution CSS **/
-.attribution { font-size: 11px; text-align: center; }
-.attribution a { color: hsl(228, 45%, 44%); }
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  color: var(--clr-white);
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}

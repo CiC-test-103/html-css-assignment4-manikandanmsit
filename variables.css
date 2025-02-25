@@ -7,9 +7,9 @@
 
 /** Font Imports **/
 @font-face {
-  font-family: 'Hanken Grotesk';
+  font-family: "Hanken Grotesk";
   font-display: swap;
-  src: url('./assets/fonts/HankenGrotesk-VariableFont_wght.ttf');
+  src: url("./assets/fonts/HankenGrotesk-VariableFont_wght.ttf");
 }
 
 /*
@@ -23,7 +23,7 @@
   /* Colours */
   --clr-lightRed: hsl(0, 100%, 67%);
   --clr-orangeYellow: hsl(39, 100%, 56%);
-  --clr-greenTeal: hsl(166, 100%, 3%);
+  --clr-greenTeal: hsl(166, 100%, 37%);
   --clr-cobaltBlue: hsl(234, 85%, 45%);
 
   /* Gradients */
@@ -31,7 +31,7 @@
   --gra-lightRoyalBlue: hsl(241, 81%, 54%); /* Background */
 
   --gra-violetBlue: hsl(256, 72%, 46%, 1); /* Circle */
-  --gra-persianBlue: hsl(241%, 72%, 46%, 0); /* Circle */
+  --gra-persianBlue: hsl(241, 72%, 46%, 0); /* Circle */
 
   /* Neutral Colours */
   --clr-white: hsl(0, 0%, 100%);
@@ -40,11 +40,19 @@
   --clr-darkGrayBlue: hsl(224, 30%, 27%);
 
   /* Typography */
+  --fs-100: 15px;
+  --fs-110: 1.125rem;
+  --fs-125: 1.25rem;
+  --fs-150: 1.5rem;
+  --fs-175: 1.75rem;
+  --fs-200: 2rem;
+
   --font-paragraph: 18px;
   --fw-regular: 500;
   --fw-bold: 700;
   --fw-black: 800;
 
   /* Fonts */
-  --fs-base: 'Hanken Grotesk';
+  --fs-base: "Inter", serif;
+  --fs-accent: "Lexent Deca", serif;
 }
